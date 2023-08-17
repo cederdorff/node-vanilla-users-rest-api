@@ -1,0 +1,13 @@
+{
+    "name": "node-fun",
+    "version": "1.0.0",
+    "description": "My Node Fun App for testing 🎉",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "test": "node .",
+        "start": "node --watch app.js"
+    },
+    "author": "Rasmus Cederdorff (RACE)",
+    "license": "ISC"
+}
