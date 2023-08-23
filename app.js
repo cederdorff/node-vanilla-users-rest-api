@@ -1,4 +1,4 @@
-import http from "node:http";
+import http from "http";
 import fs from "fs/promises";
 
 const app = http.createServer(async (req, res) => {
@@ -31,7 +31,7 @@ const app = http.createServer(async (req, res) => {
         const users = JSON.parse(data);
         users.push(user);
         const usersJSON = JSON.stringify(users);
-        fs.writeFile("data.json", usersJSON);
+        await fs.writeFile("data.json", usersJSON);
 
         // set the status code and content-type
         res.writeHead(200, { "Content-Type": "application/json" });
